@@ -24,7 +24,7 @@ public class BookStoreApplication {
 	@Bean
 	public CommandLineRunner demo(BookRepository repository,CategoryRepository crepository) {
 	return (args) -> {
-		log.info("save a couple of students");
+		log.info("save a couple of books");
 		
 		crepository.save(new Category("Fantastic"));
 		crepository.save(new Category("Romantic"));
@@ -44,12 +44,10 @@ public class BookStoreApplication {
 		repository.save(book5);
 		repository.save(book6);
 		
-		log.info("fetch all students");
+		log.info("fetch all books");
 		for (Book book : repository.findAll()) {
 			log.info(book.toString());
 		}
-
-		
 	
 	};
 	}
