@@ -18,5 +18,9 @@
 <img width="1440" alt="Screenshot 2019-05-24 at 14 46 46" src="https://user-images.githubusercontent.com/35221164/58326809-91be1c80-7e36-11e9-83fb-36d22b4cb292.png">
 
 # Admin can use Delete and Add books functions
-<img width="1440" alt="Screenshot 2019-05-24 at 14 47 00" src="https://user-images.githubusercontent.com/35221164/58326811-94207680-7e36-11e9-8f13-9fd493f57dee.png">
+<img width="1440" alt="Screenshot 2019-05-24 at 15 34 24" src="https://user-images.githubusercontent.com/35221164/58332529-1c594880-7e44-11e9-8d0c-ce2f07780f3c.png">
+
+# Saving user to databases, using Spring log-in form 
+<img width="1440" alt="Screenshot 2019-05-24 at 16 49 42" src="https://user-images.githubusercontent.com/35221164/58332540-1e230c00-7e44-11e9-934a-0bb9d38330c9.png">
+
 
