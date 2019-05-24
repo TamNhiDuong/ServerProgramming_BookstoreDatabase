@@ -12,6 +12,8 @@ import com.example.Bookstore.domain.Book;
 import com.example.Bookstore.domain.BookRepository;
 import com.example.Bookstore.domain.Category;
 import com.example.Bookstore.domain.CategoryRepository;
+//import com.example.Bookstore.domain.User;
+//import com.example.Bookstore.domain.UserRepository;
 
 @SpringBootApplication
 public class BookStoreApplication {
@@ -43,6 +45,7 @@ public class BookStoreApplication {
 		repository.save(book4);
 		repository.save(book5);
 		repository.save(book6);
+		
 		
 		log.info("fetch all books");
 		for (Book book : repository.findAll()) {
