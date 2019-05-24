@@ -32,14 +32,14 @@ public class BookController {
 		return "booklist"; 
 	}
 	
-	//@PreAuthorize("hasAuthority('ADMIN')")
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public String deleteBook(@PathVariable("id") Long bookId, Model model) {
     	repository.deleteById(bookId);
         return "redirect:../booklist";
     } 
 	
-	//@PreAuthorize("hasAuthority('ADMIN')")
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@RequestMapping(value = "/add")
 	    public String addBook(Model model){
 		 //content of the method is completely empty new object

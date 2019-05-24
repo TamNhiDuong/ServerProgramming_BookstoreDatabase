@@ -12,8 +12,8 @@ import com.example.Bookstore.domain.Book;
 import com.example.Bookstore.domain.BookRepository;
 import com.example.Bookstore.domain.Category;
 import com.example.Bookstore.domain.CategoryRepository;
-//import com.example.Bookstore.domain.User;
-//import com.example.Bookstore.domain.UserRepository;
+import com.example.Bookstore.domain.User;
+import com.example.Bookstore.domain.UserRepository;
 
 @SpringBootApplication
 public class BookStoreApplication {
@@ -24,7 +24,7 @@ public class BookStoreApplication {
 		SpringApplication.run(BookStoreApplication.class, args);
 	}
 	@Bean
-	public CommandLineRunner demo(BookRepository repository,CategoryRepository crepository) {
+	public CommandLineRunner demo(BookRepository repository,CategoryRepository crepository, UserRepository urepository) {
 	return (args) -> {
 		log.info("save a couple of books");
 		
@@ -45,6 +45,14 @@ public class BookStoreApplication {
 		repository.save(book4);
 		repository.save(book5);
 		repository.save(book6);
+		
+		//Demo user
+				//https://www.browserling.com/tools/bcrypt using this to generate bcrypt password
+				User user1 = new User("user", "$2a$10$n1UULdce1utCr3tC/XLP0OjIOAwjFB0yCImFkAgeyXcevf9jPnK3.", "admin@gmail.com", "USER");
+				User user2 = new User("admin", "$2a$10$cDLOfjCusgDBg0WSaWOs7ewujF4PTAgW5FednrvNlpR05d73Jp./q", "user@gmail.com", "ADMIN");
+				urepository.save(user1);
+			    urepository.save(user2);
+
 		
 		
 		log.info("fetch all books");
