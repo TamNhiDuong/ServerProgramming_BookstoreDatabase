@@ -2,8 +2,10 @@
 1. Using Thymeleaf template engine.
 2. Adding CRUB operations: Delete, Add, Edit.
 3. Creating relationship between database (Category).
+4. Adding Restful services.
 5. Adding Log-in and Log-out page with in-memmory users.
 6. Adding Sign-up page with Username, Password, Email address. Using User entity and encrypted passwords.
+7. Testing & Deployment: https://nhisbookstore.herokuapp.com/login
 
 # Page with Delete, Add, Edit function
 <img width="1440" alt="Screenshot 2019-05-22 at 19 38 12" src="https://user-images.githubusercontent.com/35221164/58192436-64a02b80-7cc9-11e9-86f0-d8118d32e01a.png">
