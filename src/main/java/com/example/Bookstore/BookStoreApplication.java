@@ -38,6 +38,7 @@ public class BookStoreApplication {
 		Book book4 = new Book("Harry Potter", "J.L.Rowling", 1997, "2114", 70, crepository.findByName("Fantastic").get(0));
 		Book book5 = new Book("The Witcher", "Andrzej Sapkowski", 1994, "2114", 90, crepository.findByName("Fantastic").get(0));
 		Book book6 = new Book("Twilight", "Stephene", 1992, "2113", 70, crepository.findByName("Fantastic").get(0));
+		
 	
 		repository.save(book1);
 		repository.save(book2);

@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.example.Bookstore.domain.Book;
 import com.example.Bookstore.domain.BookRepository;
 import com.example.Bookstore.domain.Category;
+//import com.example.Bookstore.domain.CategoryRepository;
 
 
 @RunWith(SpringRunner.class)
@@ -21,6 +22,7 @@ public class BookRepositoryTest {
 
 	 @Autowired
 	    private BookRepository repository;
+	    //private CategoryRepository crepository;
 	    
 	    @Test
 	    public void findByTitleShouldReturnBook() {
@@ -36,4 +38,5 @@ public class BookRepositoryTest {
 	    	repository.save(book);
 	    	assertThat(book.getId()).isNotNull();
 	    }  
+	    
 }
