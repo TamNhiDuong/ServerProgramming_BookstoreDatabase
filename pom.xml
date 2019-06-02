@@ -59,6 +59,23 @@
         	<groupId>org.thymeleaf.extras</groupId>
         	<artifactId>thymeleaf-extras-springsecurity5</artifactId>
     	</dependency>
+    	<!-- More dependencies for login with social media -->
+		<dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-client</artifactId>
+        </dependency>
+		
+		<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+		<!-- JWT library -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.5.1</version>
+		</dependency>
 	</dependencies>
 	
 

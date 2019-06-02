@@ -23,7 +23,8 @@ public class BookRepositoryTest {
 	 @Autowired
 	    private BookRepository repository;
 	    //private CategoryRepository crepository;
-	    
+	 
+	    //Check if I can find a book
 	    @Test
 	    public void findByTitleShouldReturnBook() {
 	        List<Book> books = repository.findByAuthor("G.G.Martin");
@@ -32,11 +33,22 @@ public class BookRepositoryTest {
 	        assertThat(books.get(0).getAuthor()).isEqualTo("G.G.Martin");
 	    }
 	    
+	    //Check if I can save a new book
 	    @Test
 	    public void createNewBook() {
 	    	Book book = new Book("IT", "Stephene King", 1992, "2113", 70, new Category("Horror"));
 	    	repository.save(book);
 	    	assertThat(book.getId()).isNotNull();
 	    }  
+	    
+	    //Check if I can delete book
+	    @Test
+	    public void deleteBook() {
+	    	List<Book> books = repository.findByTitle("Twilight");
+	    	assertThat(books).hasSize(1);
+	    	repository.deleteById((long) 9);
+	    	books = repository.findByTitle("Twilight");
+	    	assertThat(books).hasSize(0);
+	    }
 	    
 }
